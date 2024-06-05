@@ -5,6 +5,18 @@
   text-align: center;
 }
 
+.menu-container {
+  display: none; /* 初期状態は非表示 */
+  position: absolute; /* ナビゲーションバーの下にメニューを表示 */
+  background-color: white; /* 背景色 */
+  width: 100%; /* 幅 */
+  z-index: 10; /* 他の要素より前面に表示 */
+}
+
+.menu-container.open {
+  display: block; /* 開いたときに表示 */
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

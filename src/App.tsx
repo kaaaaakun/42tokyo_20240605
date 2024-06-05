@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Privacy from "./Privacy";
 import Products from "./Products";
 import Footer from "./Footer";
+import SlideShow from "./SlideShow";
 
 function Hamburger() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,30 +17,25 @@ function Hamburger() {
   };
 
   return (
-    <div>
-      <button
-        onClick={toggleMenu}
-        style={{ fontSize: "30px", cursor: "pointer" }}
-      >
+    <>
+      <button onClick={toggleMenu} className="hamburger-button">
         &#9776; {/* ハンバーガーアイコン */}
       </button>
-      {isOpen && (
-        <nav
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-          }}
-        >
-          <Link to="/" onClick={toggleMenu}>
-            Home
-          </Link>
-          <Link to="/privacy" onClick={toggleMenu}>
-            Privacy Policy
-          </Link>
-        </nav>
-      )}
-    </div>
+      <div className={`menu-container ${isOpen ? "open" : ""}`}>
+        <ul>
+          <li>
+            <a href="https://futsuno.shop/">HOME</a>
+          </li>
+          <li>
+            <a href="https://futsuno.shop/shop/customers/sign_in">ログイン</a>
+          </li>
+          <li>
+            <a href="https://futsuno.shop/shop/pages/brand">ブランド</a>
+          </li>
+          {/* 他のリンク */}
+        </ul>
+      </div>
+    </>
   );
 }
 
@@ -50,10 +46,11 @@ function Header() {
         borderBottom: "1px solid",
         marginBottom: "20px",
         display: "flex",
+        justifyContent: "space-between", // フレックスコンテナ内のアイテムを両端に配置
         alignItems: "center",
+        padding: "0 20px", // 左右に20pxのパディングを追加
       }}
     >
-      <Hamburger /> {/* ハンバーガーメニューを追加 */}
       <a
         href="https://futsuno.shop/"
         style={{
@@ -61,7 +58,6 @@ function Header() {
           alignItems: "center",
           textDecoration: "none",
           color: "inherit",
-          marginLeft: "20px",
         }}
       >
         <img
@@ -70,17 +66,8 @@ function Header() {
           style={{ height: "50px", marginRight: "10px" }}
         />
       </a>
+      <Hamburger /> {/* ハンバーガーメニュー */}
     </nav>
-  );
-}
-
-function SlideShow() {
-  return (
-    <img
-      src="https://d2w53g1q050m78.cloudfront.net/futsunoshop/uploads/assets/images/pages/top/kv/kv_gift_sp.webp"
-      alt="Slide Show"
-      style={{ width: "100%", height: "500px" }}
-    />
   );
 }
 

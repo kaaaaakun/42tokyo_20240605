@@ -20,7 +20,7 @@ function Products() {
               />
               <div className="product-info">
                 <h2 className="product-name">{product.name}</h2>
-                <p className="product-title">{product.title}</p>
+                {/* <p className="product-title">{product.title}</p> */}
               </div>
             </div>
           ))}
@@ -35,7 +35,7 @@ function Products() {
               />
               <div className="product-info">
                 <h2 className="product-name">{product.name}</h2>
-                <p className="product-title">{product.title}</p>
+                {/* <p className="product-title">{product.title}</p> */}
               </div>
             </div>
           ))}

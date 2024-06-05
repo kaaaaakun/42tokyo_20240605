@@ -21,9 +21,9 @@
 }
 
 .product-card {
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   padding: 10px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); */
 }
 
 .product-image {
@@ -32,8 +32,55 @@
   object-fit: cover;
 }
 
+/* .product-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* 親コンテナの高さを設定 */
+
+/* .main {
+  flex: 2; 
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  width: 100%;
+}
+
+.sub {
+  flex: 1; 
+  display: flex;
+  justify-content: space-around; 
+  align-items: center; 
+  width: 100%;
+}
+
+.main .product-card {
+  flex: 1 1 100%; 
+  max-width: 815px; 
+}
+
+.sub .product-card {
+  flex: 1 1 calc(33.333% - 20px); 
+  margin: 10px;
+}
+
+
+
+.product-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 30%; 
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+}  */
+
 .product-info {
   padding: 15px;
+  text-align: center;
 }
 
 .product-name {
